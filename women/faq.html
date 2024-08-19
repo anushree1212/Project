@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Government Women's Scheme - FAQ Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('two.jpg');
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px ;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    float: right;
+}
+.container{
+    max-width: 600px;
+    margin: 50px;
+    background-color: wheat;
+    float:inline-start;
+    top: 50%;
+    
+    
+}
+h1 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.response {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e9f5e9;
+}
+
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+        
+        <h1>Government Women's Scheme - FAQ Form</h1>
+        <form id="faqForm">
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="4" cols="50" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response" class="response"></div>
+    </center>
+         
+         <div class="container">
+            <p>---------------------------------------------------------------------------------------------------------------</p>
+        <h2>Eligibility and Application</h2>
+
+      <h3> What is the eligibility criteria for the scheme? </h3>
+        <p>The eligibility criteria may include age, income level, marital status, and other specific requirements depending on the scheme. Please refer to the scheme's official guidelines for detailed information.</p>
+
+    <h3> How can I apply for the scheme?</h3>
+        <p>You can apply for the scheme online through the official government portal or in person at designated application centers. Ensure you have all the required documents before starting your application.</p>
+
+   <h3> What documents do I need to submit with my application?</h3>
+       <p> Commonly required documents include proof of identity, proof of residence, income certificates, and any other documents specified by the scheme.</p>
+
+    <h3>Is there an application fee?</h3>
+       <p> Check the scheme's official guidelines to determine if there is an application fee and how it can be paid.</p>
+
+<h2>Scheme Benefits</h2>
+
+    <h3>What benefits does the scheme offer?</h3>
+        <p>The scheme may offer financial assistance, educational opportunities, job training, healthcare services, or other forms of support. Review the scheme details for specific benefits.</p>
+
+    <h3>How long does it take to receive benefits after applying?</h3>
+        <p>Processing times may vary depending on the scheme and the volume of applications received. Contact the scheme's support team for current wait times.</p>
+<h2>Support Services</h2>
+
+    <h3>What support is available to help with my application?</h3>
+       <p>Support services may include helplines, online chat support, or in-person assistance at application centers.</p> 
+
+    <h3>How can I contact the support team?</h3>
+        <p>You can contact the support team via phone, email, or online chat. Refer to the scheme's official website for contact details.</p>
+
+<h2>Miscellaneous</h2>
+
+    <h3>Can I apply for the scheme more than once?</h3>
+        <p>The scheme's policies on reapplication may vary. Check the official guidelines for specific information on multiple applications.</p>
+
+    <h3>What should I do if my application is rejected?</h3>
+        <p>If your application is rejected, you may have the option to appeal the decision or reapply if you believe you meet the eligibility criteria.</p>
+    
+        <button type="button" onclick="window.location.href='women.html';">Official Website</button>
+
+    </div>
+
+    <script>
+
+document.getElementById("faqForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    const question = document.getElementById("question").value;
+    const responseDiv = document.getElementById("response");
+
+    // A simple way to provide responses to common questions
+    let responseText;
+
+    if (question.toLowerCase().includes("eligibility")) {
+        responseText = "Eligibility: Women of any age who meet the criteria for the scheme can apply. Criteria may include income, employment status, etc.";
+    } else if (question.toLowerCase().includes("benefits")) {
+        responseText = "Benefits: The scheme provides various benefits such as financial assistance, vocational training, healthcare services, and more.";
+    } else if (question.toLowerCase().includes("apply")) {
+        responseText = "To apply: Visit the official website and fill out the application form with the necessary details.";
+    } else {
+        responseText = "Thank you for your question! Please visit our official website for more detailed information about the scheme.";
+    }
+
+    // Display response
+    responseDiv.textContent = responseText;
+});
+
+    </script>
+</body>
+</html>
